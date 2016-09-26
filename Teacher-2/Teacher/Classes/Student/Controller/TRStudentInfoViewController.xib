@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TRStudentInfoViewController">
+            <connections>
+                <outlet property="dataPicker" destination="Itb-3A-HbA" id="LpO-uh-jZP"/>
+                <outlet property="headIV" destination="lS2-VH-fn9" id="aFQ-Xl-h90"/>
+                <outlet property="nickTF" destination="WFR-Cq-Ms4" id="OS8-W6-DHp"/>
+                <outlet property="pwTF" destination="IOi-c0-C5U" id="UWk-ML-eqc"/>
+                <outlet property="usernameTF" destination="HDk-VT-FKr" id="emZ-B5-faT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble_13" translatesAutoresizingMaskIntoConstraints="NO" id="lS2-VH-fn9">
+                    <rect key="frame" x="147" y="68" width="80" height="80"/>
+                    <animations/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="v8d-Ku-cMM" appends="YES" id="Mey-23-RJs"/>
+                    </connections>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDk-VT-FKr">
+                    <rect key="frame" x="71" y="160" width="233" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WFR-Cq-Ms4">
+                    <rect key="frame" x="71" y="207" width="233" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345678" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOi-c0-C5U">
+                    <rect key="frame" x="71" y="250" width="233" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Itb-3A-HbA">
+                    <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                    <animations/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yY8-e1-c92"/>
+                        <outlet property="delegate" destination="-1" id="IQ0-nM-Tq2"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKk-1g-6dR">
+                    <rect key="frame" x="71" y="288" width="75" height="30"/>
+                    <animations/>
+                    <state key="normal" title="选择班级："/>
+                    <connections>
+                        <action selector="classAction:" destination="-1" eventType="touchUpInside" id="gj2-qk-hel"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="242.5" y="181.5"/>
+        </view>
+        <tapGestureRecognizer id="v8d-Ku-cMM">
+            <connections>
+                <action selector="tapAction:" destination="-1" id="f2U-Pb-YLB"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="bubble_13" width="57" height="63"/>
+    </resources>
+</document>
