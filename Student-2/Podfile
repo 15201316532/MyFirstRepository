@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+target 'Student' do
+
+    pod 'BmobSDK'
+    pod 'AFNetworking', '~> 3.0'
+    pod 'SVPullToRefresh'
+    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'SDWebImage', '~>3.8'
+
+end
